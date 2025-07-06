@@ -14,7 +14,9 @@ export const TodoItem = ({ todo }: Props) => {
   return (
     <li className="flex flex-col gap-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:py-2 border-b">
       <span
-        className={`flex-grow min-w-0 break-all cursor-pointer ${todo.completed ? 'line-through text-gray-400' : ''}`}
+        className={`flex-grow min-w-0 break-all cursor-pointer line-clamp-2 ${
+          todo.completed ? 'line-through text-gray-400' : ''
+        }`}
         onClick={() => openEditModal(todo)}
       >
         {todo.text}
