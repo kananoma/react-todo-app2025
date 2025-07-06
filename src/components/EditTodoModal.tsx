@@ -2,7 +2,7 @@
 
 import { useContext, useState, useEffect } from 'react'
 import { Button } from '@/components/ui/button'
-import { Input } from '@/components/ui/input'
+import { Textarea } from '@/components/ui/textarea'
 import { TodoContext } from '../contexts/TodoContext'
 
 export const EditTodoModal = () => {
@@ -41,11 +41,10 @@ export const EditTodoModal = () => {
       >
         <h2 className="text-xl font-bold mb-4">TODOを編集</h2>
         <form onSubmit={handleSubmit}>
-          <Input
-            type="text"
+          <Textarea
             value={text}
             onChange={(e) => setText(e.target.value)}
-            className="mb-4"
+            className="mb-4 min-h-[80px]"
             autoFocus // モーダルが開いたら自動でフォーカスする
           />
           <div className="flex justify-end gap-2">
