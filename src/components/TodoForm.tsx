@@ -2,6 +2,7 @@
 
 import { useContext, useState } from 'react'
 import { Button } from '@/components/ui/button'
+import { Input } from '@/components/ui/input'
 import { TodoContext } from '../contexts/TodoContext'
 
 export const TodoForm = () => {
@@ -19,12 +20,12 @@ export const TodoForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="flex justify-between mb-4 gap-2">
-      <input
+      <Input
         type="text"
         value={text}
         onChange={(e) => setText(e.target.value)}
         placeholder="新しいTODOを入力"
-        className="flex-grow min-w-0 p-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
+        className="flex-grow min-w-0"
       />
       <Button type="submit">追加</Button>
     </form>
