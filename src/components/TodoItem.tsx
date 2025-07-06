@@ -12,14 +12,14 @@ export const TodoItem = ({ todo }: Props) => {
   const { toggleTodo, deleteTodo, openEditModal } = useContext(TodoContext)
 
   return (
-    <li className="flex items-center justify-between py-2 border-b">
+    <li className="flex flex-col gap-3 py-3 sm:flex-row sm:items-center sm:justify-between sm:py-2 border-b">
       <span
         className={`flex-grow min-w-0 break-all cursor-pointer ${todo.completed ? 'line-through text-gray-400' : ''}`}
         onClick={() => openEditModal(todo)}
       >
         {todo.text}
       </span>
-      <div className="flex flex-shrink-0 items-center gap-2 ml-4">
+      <div className="flex flex-shrink-0 self-end sm:self-auto items-center gap-2 sm:ml-4">
         <Button onClick={() => toggleTodo(todo.id)} variant="outline" size="sm" className="w-20">
           {todo.completed ? '未完了' : '完了'}
         </Button>

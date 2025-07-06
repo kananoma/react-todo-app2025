@@ -18,7 +18,7 @@ export const TodoForm = () => {
   }
 
   return (
-    <form onSubmit={handleSubmit} className="flex justify-between mb-4 gap-2 flex-wrap">
+    <form onSubmit={handleSubmit} className="flex justify-between mb-4 gap-2">
       <input
         type="text"
         value={text}
