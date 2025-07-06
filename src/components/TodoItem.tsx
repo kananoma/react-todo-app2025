@@ -8,11 +8,14 @@ type Props = {
 }
 
 export const TodoItem = ({ todo }: Props) => {
-  const { toggleTodo, deleteTodo } = useContext(TodoContext)
+  const { toggleTodo, deleteTodo, openEditModal } = useContext(TodoContext)
 
   return (
     <li className="flex items-center justify-between py-2 border-b">
-      <span className={`flex-grow min-w-0 break-all ${todo.completed ? 'line-through text-gray-400' : ''}`}>
+      <span
+        className={`flex-grow min-w-0 break-all cursor-pointer ${todo.completed ? 'line-through text-gray-400' : ''}`}
+        onClick={() => openEditModal(todo)}
+      >
         {todo.text}
       </span>
       <div className="flex flex-shrink-0 items-center gap-2 ml-4">

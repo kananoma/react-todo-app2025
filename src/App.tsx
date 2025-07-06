@@ -1,6 +1,7 @@
 import { TodoProvider } from './contexts/TodoContext'
 import { TodoForm } from './components/TodoForm'
 import { TodoList } from './components/TodoList'
+import { EditTodoModal } from './components/EditTodoModal'
 
 export const App = () => {
   return (
@@ -12,6 +13,7 @@ export const App = () => {
           <TodoList />
         </div>
       </div>
+      <EditTodoModal />
     </TodoProvider>
   )
 }
