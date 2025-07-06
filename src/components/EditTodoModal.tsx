@@ -1,6 +1,7 @@
 // 編集モーダル
 
 import { useContext, useState, useEffect } from 'react'
+import { Button } from '@/components/ui/button'
 import { TodoContext } from '../contexts/TodoContext'
 
 export const EditTodoModal = () => {
@@ -47,12 +48,10 @@ export const EditTodoModal = () => {
             autoFocus // モーダルが開いたら自動でフォーカスする
           />
           <div className="flex justify-end gap-2">
-            <button type="button" onClick={closeEditModal} className="btn bg-gray-300 px-4 py-2 hover:bg-gray-400">
+            <Button type="button" variant="outline" onClick={closeEditModal}>
               キャンセル
-            </button>
-            <button type="submit" className="btn bg-blue-500 px-4 py-2 hover:bg-blue-600 focus:ring-blue-500">
-              保存
-            </button>
+            </Button>
+            <Button type="submit">保存</Button>
           </div>
         </form>
       </div>
