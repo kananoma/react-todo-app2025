@@ -27,7 +27,9 @@ export const TodoForm = () => {
         placeholder="新しいTODOを入力"
         className="flex-grow min-w-0"
       />
-      <Button type="submit">追加</Button>
+      <Button type="submit" disabled={text.trim() === ''}>
+        追加
+      </Button>
     </form>
   )
 }

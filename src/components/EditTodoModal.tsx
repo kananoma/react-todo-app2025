@@ -51,7 +51,9 @@ export const EditTodoModal = () => {
             <Button type="button" variant="outline" onClick={closeEditModal}>
               キャンセル
             </Button>
-            <Button type="submit">保存</Button>
+            <Button type="submit" disabled={text.trim() === ''}>
+              保存
+            </Button>
           </div>
         </form>
       </div>
